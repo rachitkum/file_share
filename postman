@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "f5630f40-3e26-4a6a-845c-d4623e3c283b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41673078"
+	},
+	"item": [
+		{
+			"name": "ops_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ops@test.com\",\r\n  \"password\": \"opspass123\",\r\n  \"role\": \"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/app/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ops_verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/app/verify-email/?token=ops@test.com:GA9LiZXCfWNjjdL8hMdcJT2QBW3dyOUm7uZ4Et0bwPk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"verify-email",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "ops@test.com:GA9LiZXCfWNjjdL8hMdcJT2QBW3dyOUm7uZ4Et0bwPk"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ops_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ops@test.com\",\r\n  \"password\": \"opspass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/app/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ops_upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token bacd55607f3ca88ffdbb546048454580233a7a84",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rachi/Downloads/Rachit_resume.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/app/upload/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"client1@test.com\",\r\n  \"password\": \"clientpass123\",\r\n  \"role\": \"client\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/app/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "email verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/app/verify-email/?token=client1@test.com:MdYazQ-z3O5eDgXuYrs1iigG3uNisv6ZNCYBr4GCdOE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"verify-email",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "client1@test.com:MdYazQ-z3O5eDgXuYrs1iigG3uNisv6ZNCYBr4GCdOE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"client1@test.com\",\r\n  \"password\": \"clientpass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/app/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c80f6e4950b53b7407bf02dc57e48e106ec646",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/app/files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file_down",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c80f6e4950b53b7407bf02dc57e48e106ec646",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/app/download-file/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"download-file",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
