@@ -25,7 +25,7 @@ class SignupView(APIView):
             return Response({"error": "Email exists"}, status=400)
         user = User.objects.create_user(email=email, role=role, password=password)
         token = signer.sign(email)
-        url = f"http://localhost:8000/api/verify-email/?token={token}"
+        url = f"http://localhost:8000/app/verify-email/?token={token}"
         return Response({"message": "Signup success", "verification_url": url})
 
 class VerifyEmailView(APIView):
@@ -98,7 +98,7 @@ class DownloadFileView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request, file_id):  # <-- now matches URLConf
+    def get(self, request, file_id): 
         if request.user.role != 'client':
             return Response({"error": "Unauthorized"}, status=403)
 
